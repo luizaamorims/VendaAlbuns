@@ -10,10 +10,6 @@ public class Album {
     public  String genero;
     private int numeroCopias;
 
-    public Album() {
-
-    }
-
     public Album(String nome, String artista, String genero, int numeroCopias) {
         this.nome = nome;
         this.artista = artista;
