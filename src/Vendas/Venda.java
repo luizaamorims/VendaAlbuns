@@ -26,8 +26,6 @@ public class Venda {
             opcao = sc.nextInt();
             sc.nextLine();
 
-
-
             switch (opcao) {
                 case 1: CadastrarAlbum();
                     break;
@@ -45,6 +43,8 @@ public class Venda {
 
     public static void CadastrarAlbum() {
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("-----------CADASTRO DE ÁLBUM-----------");
         System.out.println("Digite o nome do álbum: ");
         String nome = sc.nextLine();
         System.out.println("Digite o nome do artista: ");
@@ -62,6 +62,24 @@ public class Venda {
         }
 
         Album album = new Album(nome, artista, genero, numeroCopias);
+
+        System.out.println("Quantas músicas o álbum possui?");
+        int numeroMusicas = sc.nextInt();
+        sc.nextLine();
+        while (numeroMusicas <= 0) {
+            System.out.println("Número de músicas deve ser maior que 0. Digite novamente: ");
+            numeroMusicas = sc.nextInt();
+            sc.nextLine();
+        }
+
+        for (int i = 0; i<numeroMusicas; i++) {
+            System.out.println("Musica " + (i + 1) + ": ");
+            String nomeMusica = sc.nextLine();
+            Musica musica = new Musica(nomeMusica);
+            album.adicionarMusica(musica);
+        }
+
+
         albums.add(album);
         System.out.println("Álbum cadastrado com sucesso!");
 
@@ -72,7 +90,7 @@ public class Venda {
         } else {
             System.out.println("Álbuns cadastrados:");
             for (Album album : albums) {
-                System.out.println(album); // Chama o toString() da classe Album
+                System.out.println(album);
             }
         }
     }

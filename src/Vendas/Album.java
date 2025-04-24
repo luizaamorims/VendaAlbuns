@@ -2,6 +2,7 @@ package Vendas;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Album {
 
@@ -9,12 +10,18 @@ public class Album {
     public String artista;
     public  String genero;
     private int numeroCopias;
+    public List<Musica> listaMusicas;
+
+   public Album() {
+
+   }
 
     public Album(String nome, String artista, String genero, int numeroCopias) {
         this.nome = nome;
         this.artista = artista;
         this.genero = genero;
         this.numeroCopias = numeroCopias;
+        this.listaMusicas = new ArrayList<>();
     }
 
     public String getNome() {
@@ -30,6 +37,9 @@ public class Album {
     public int getNumeroCopias() {
         return numeroCopias;
     }
+    public List<Musica> getMusicas() {
+        return listaMusicas;
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -39,6 +49,11 @@ public class Album {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+    public void setMusicas(List<Musica> musicas) {
+        this.listaMusicas = musicas;
+    }
+
+
 
     public void setNumeroCopias(int numeroCopias) {
         if (numeroCopias >=0) {
@@ -50,8 +65,8 @@ public class Album {
 
     public String toString() {
         return String.format(
-                "Álbum: %s | Artista: %s | Gênero: %s | Cópias: %d",
-                nome, artista, genero, numeroCopias
+                "Álbum: %s | Artista: %s | Gênero: %s | Cópias: %d | Músicas: %s",
+                nome, artista, genero, numeroCopias, listaMusicas.toString()
         );
     }
 
@@ -62,6 +77,10 @@ public class Album {
         } else {
             System.out.println("Não há cópias disponíveis para venda.");
         }
+    }
+
+    public void adicionarMusica(Musica musica) {
+        listaMusicas.add(musica);
     }
 
 
