@@ -54,7 +54,6 @@ public class Album {
     }
 
 
-
     public void setNumeroCopias(int numeroCopias) {
         if (numeroCopias >=0) {
             this.numeroCopias = numeroCopias;
