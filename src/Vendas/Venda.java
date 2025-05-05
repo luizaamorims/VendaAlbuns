@@ -101,7 +101,10 @@ public class Venda {
         String nome = sc.nextLine();
         for (Album album : albums) {
             if (album.getNome().equals(nome)) {
-                album.venderAlbum();
+                System.out.println("Quantas copias deseja vender?: ");
+                int copias = sc.nextInt();
+                sc.nextLine();
+                album.venderAlbum(copias);
                 return;
             }
         }

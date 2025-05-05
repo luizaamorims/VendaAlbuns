@@ -69,10 +69,10 @@ public class Album {
         );
     }
 
-    public void venderAlbum() {
+    public void venderAlbum(int copias) {
         if (numeroCopias > 0) {
-            numeroCopias--;
-            System.out.println("Álbum vendido com sucesso!");
+            numeroCopias = (numeroCopias - copias);
+            System.out.println("Álbum(s) vendido(s) com sucesso!");
         } else {
             System.out.println("Não há cópias disponíveis para venda.");
         }
