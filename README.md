@@ -1,41 +1,50 @@
-🎵 Sistema de Venda de Músicas
+# 🎵 Sistema de Venda de Músicas
+
 Este é um projeto Java simples que simula um sistema de venda de álbuns musicais. O sistema permite cadastrar músicas, organizar álbuns e realizar vendas.
 
-📁 Estrutura do Projeto
-Musica.java: Classe que representa uma música com atributos como título, artista e duração.
+---
 
-Album.java: Classe que agrupa várias músicas e representa um álbum.
+## 📁 Estrutura do Projeto
 
-Venda.java: Classe responsável por gerenciar a venda de álbuns ou músicas.
+- `Musica.java` – Representa uma música com atributos como título, artista e duração.
+- `Album.java` – Agrupa músicas formando um álbum.
+- `Venda.java` – Gerencia vendas de álbuns e realiza cálculos de valor.
 
-🚀 Funcionalidades
-Criar e armazenar músicas.
+---
 
-Criar álbuns com base em listas de músicas.
+## 🚀 Funcionalidades
 
-Realizar vendas com base em álbuns.
+- Criar e armazenar músicas.
+- Criar álbuns com base em listas de músicas.
+- Realizar vendas com base em álbuns.
+- Calcular preços totais de vendas.
 
-Calcular preços de venda.
+---
 
-✅ Tecnologias utilizadas
-Linguagem: Java
+## ✅ Tecnologias Utilizadas
 
-IDE recomendada: IntelliJ IDEA ou Eclipse
+- **Linguagem:** Java
+- **IDE recomendada:** IntelliJ IDEA ou Eclipse
+- **JDK mínimo:** Java 11
 
-Versão mínima recomendada do JDK: Java 11
+---
 
-▶️ Como executar
-Clone o repositório ou baixe os arquivos .java.
+## ▶️ Como Executar
 
-Abra em sua IDE preferida.
+1. Clone este repositório ou baixe os arquivos `.java`.
+2. Importe em sua IDE de preferência.
+3. Compile e execute o programa.
+4. Teste criando objetos das classes `Musica`, `Album` e `Venda`.
 
-Compile e execute o método main() (caso exista em alguma das classes).
+---
 
-Você pode criar objetos das classes Musica, Album e Venda para testar a lógica.
+## 📌 Observações
 
-📌 Observações
-O projeto é voltado para fins didáticos.
+- Este projeto é **didático** e pode ser expandido com:
+  - Controle de estoque
+  - Cadastro de clientes
+  - Geração de relatórios
 
-Não possui interface gráfica (GUI).
+---
 
-Pode ser expandido com funcionalidades como estoque, clientes e relatórios.
+
